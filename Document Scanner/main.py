@@ -66,10 +66,10 @@ while True:
     imgThres = preProcessImag(img,kernelSize)
     # cv2.imshow("video", imgThres)
     biggest = getCountours(imgThres)
-    cv2.imshow("video", imgContour)
+#     cv2.imshow("video", imgContour)
     if biggest.size != 0:
         imgWarped = getWarp(img,biggest)
-        # cv2.imshow("video", imgWarped)
+        cv2.imshow("video", imgWarped)
 
 
     if cv2.waitKey(1) & 0xFF == ord('a'):
